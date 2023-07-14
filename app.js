@@ -9,7 +9,7 @@ const emailUsername = process.env.EMAIL_USERNAME;
 const emailPassword = process.env.EMAIL_PASSWORD;
 
 const app = express();
-const port = 8006;
+const port = process.env.PORT || 8006;
 
 router.post("/register", (req, res) => {
   const { name, subject, message,email } =
